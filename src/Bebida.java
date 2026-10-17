@@ -2,11 +2,11 @@ import java.util.List;
 
 public abstract class Bebida {
 
-	private String descricao;
+	private final String descricao;
 	protected List<EFruta> frutas;
 
 	public Bebida(String descricao) {
-		
+		this.descricao = descricao;
 	}
 
 	public abstract int adicionar(EFruta fruta);
@@ -15,7 +15,7 @@ public abstract class Bebida {
 
 	@Override
 	public String toString() {
-		
+		return this.descricao;
 	}
 
 }
